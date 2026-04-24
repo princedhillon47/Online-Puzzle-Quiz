@@ -1,0 +1,16 @@
+<mat-card>
+  <mat-action-list>
+    <div mat-subheader>User Menu</div>
+    <button routerLink="/user-dashboard/profile" mat-list-item>
+      <mat-icon matListItemIcon>account_circle</mat-icon> Profile
+    </button>
+
+    <button routerLink="/user-dashboard/0" mat-list-item>
+      <mat-icon matListItemIcon>quiz</mat-icon> All Quizzes
+    </button>
+
+    <button (click)="logout()" mat-list-item>
+      <mat-icon matListItemIcon>logout</mat-icon> Logout
+    </button>
+  </mat-action-list>
+</mat-card>

@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>All Quizzes</mat-card-title>
+    <mat-card-subtitle>List of all quizzes available in the portal</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+<div class="mt-3">
+  <mat-card *ngFor="let q of quizzes" class="mb-3">
+    <mat-card-header>
+      <div mat-card-avatar>
+        <img src="assets/quiz.jpg" alt="Quiz Icon" style="max-width: 40px" />
+      </div>
+      <mat-card-title>{{ q.title }}</mat-card-title>
+      <mat-card-subtitle>{{ q.category.title }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <p>{{ q.description }}</p>
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button
+        [routerLink]="'/admin/view-questions/' + q.qId + '/' + q.title"
+        mat-button
+        color="primary"
+      >
+        Questions: {{ q.numberOfQuestions }}
+      </button>
+      <button mat-button color="accent">Max Marks: {{ q.maxMarks }}</button>
+
+      <button (click)="deleteQuiz(q.qId)" mat-flat-button color="warn" class="ms-2">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="text-center mt-4 mb-4">
+  <button routerLink="/admin/add-quiz" mat-raised-button color="accent">Add New Quiz</button>
+</div>

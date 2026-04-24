@@ -1,0 +1,27 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Add New Category</mat-card-title>
+    <mat-card-subtitle>Enter the details for the new exam category</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <form (ngSubmit)="formSubmit()" class="mt-3">
+      
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Title</mat-label>
+        <input required [(ngModel)]="category.title" name="title" matInput placeholder="Enter category title">
+      </mat-form-field>
+
+      <mat-form-field class="w-100" appearance="outline">
+        <mat-label>Description</mat-label>
+        <textarea [(ngModel)]="category.description" name="description" matInput placeholder="Enter category description" rows="5"></textarea>
+      </mat-form-field>
+
+      <div class="text-center mt-2">
+        <button type="submit" mat-raised-button color="primary">Add Category</button>
+        <button type="reset" mat-raised-button color="accent" class="ms-2">Clear</button>
+      </div>
+
+    </form>
+  </mat-card-content>
+</mat-card>

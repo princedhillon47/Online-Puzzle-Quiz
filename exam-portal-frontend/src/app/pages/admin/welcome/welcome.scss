@@ -1,0 +1,47 @@
+.hero-card {
+  background: linear-gradient(135deg, #3f51b5 0%, #5c6bc0 100%);
+  color: white;
+  border-radius: 10px;
+
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+  }
+}
+
+.stat-card {
+  padding: 30px 10px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+
+  /* Adds a smooth floating effect when you hover over the cards */
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .stat-icon {
+    font-size: 60px;
+    height: 60px;
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+
+  h3 {
+    color: #666;
+    font-weight: 400;
+  }
+}

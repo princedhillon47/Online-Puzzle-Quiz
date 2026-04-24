@@ -1,0 +1,25 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>All Categories</mat-card-title>
+    <mat-card-subtitle>List of all exam categories in the database</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+<mat-card class="mt-3" *ngFor="let c of categories">
+  <mat-card-header>
+    <div mat-card-avatar>
+      <mat-icon color="primary">category</mat-icon>
+    </div>
+    <mat-card-title>{{ c.title }}</mat-card-title>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <p>{{ c.description }}</p>
+  </mat-card-content>
+</mat-card>
+
+<div class="text-center mt-4 mb-4">
+  <button routerLink="/admin/add-category" mat-raised-button color="accent">
+    Add New Category
+  </button>
+</div>

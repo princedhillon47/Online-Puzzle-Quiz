@@ -1,0 +1,60 @@
+<div class="bootstrap-wrapper" *ngIf="user">
+  <div class="container text-center mt-3">
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+        <mat-card>
+          <mat-card-header class="justify-content-center">
+            <mat-card-title>
+              <h1 class="mt-2">Your Profile</h1>
+            </mat-card-title>
+          </mat-card-header>
+
+          <mat-card-content>
+            <img
+              src="../../../../assets/profile.png"
+              alt="Profile Picture"
+              class="profile-image mb-3"
+              onerror="this.src = 'https://cdn-icons-png.flaticon.com/512/3135/3135715.png'"
+            />
+
+            <h2 class="mt-2">{{ user.firstName }} {{ user.lastName }}</h2>
+
+            <table class="table text-center mt-3">
+              <tbody>
+                <tr>
+                  <td><b>Username</b></td>
+                  <td>{{ user.username }}</td>
+                </tr>
+                <tr>
+                  <td><b>User ID</b></td>
+                  <td>{{ user.id }}</td>
+                </tr>
+                <tr>
+                  <td><b>Email</b></td>
+                  <td>{{ user.email }}</td>
+                </tr>
+                <tr>
+                  <td><b>Phone</b></td>
+                  <td>{{ user.phone }}</td>
+                </tr>
+                <tr>
+                  <td><b>Role</b></td>
+                  <td>{{ user.authorities[0].authority }}</td>
+                </tr>
+                <tr>
+                  <td><b>Status</b></td>
+                  <td>{{ user.enabled ? 'ACTIVE' : 'INACTIVE' }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </mat-card-content>
+
+          <mat-card-actions class="justify-content-center mt-2 mb-3">
+            <button mat-raised-button color="primary">Update Details</button>
+            <button mat-raised-button color="accent" class="ms-2">Share Profile</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

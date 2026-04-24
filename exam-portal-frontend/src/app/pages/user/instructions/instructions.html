@@ -1,0 +1,74 @@
+<div class="bootstrap-wrapper" *ngIf="quiz">
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card>
+          <mat-card-header>
+            <div mat-card-avatar>
+              <mat-icon color="primary" style="font-size: 40px; height: 40px; width: 40px"
+                >info</mat-icon
+              >
+            </div>
+            <mat-card-title>Read the Instructions Carefully</mat-card-title>
+            <mat-card-subtitle>{{ quiz.title }}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content class="mt-3">
+            <p>{{ quiz.description }}</p>
+
+            <mat-divider class="mt-3 mb-3"></mat-divider>
+
+            <h3>Important Guidelines:</h3>
+            <mat-list>
+              <mat-list-item>
+                <mat-icon matListItemIcon color="primary">format_list_numbered</mat-icon>
+                <div matListItemTitle>Total Questions</div>
+                <div matListItemLine>
+                  This exam contains <b>{{ quiz.numberOfQuestions }}</b> questions.
+                </div>
+              </mat-list-item>
+
+              <mat-list-item>
+                <mat-icon matListItemIcon color="primary">grade</mat-icon>
+                <div matListItemTitle>Maximum Marks</div>
+                <div matListItemLine>
+                  The total score for this exam is <b>{{ quiz.maxMarks }}</b
+                  >.
+                </div>
+              </mat-list-item>
+
+              <mat-list-item>
+                <mat-icon matListItemIcon color="primary">timer</mat-icon>
+                <div matListItemTitle>Time Limit</div>
+                <div matListItemLine>
+                  You will have <b>{{ quiz.numberOfQuestions * 2 }} minutes</b> to complete this
+                  exam.
+                </div>
+              </mat-list-item>
+
+              <mat-list-item>
+                <mat-icon matListItemIcon color="warn">warning</mat-icon>
+                <div matListItemTitle>Submission Rules</div>
+                <div matListItemLine>
+                  Do not refresh the page. The exam will automatically submit when the timer hits
+                  zero.
+                </div>
+              </mat-list-item>
+            </mat-list>
+          </mat-card-content>
+
+          <mat-card-actions class="text-center mt-3 mb-3">
+            <button
+              (click)="startQuiz()"
+              mat-raised-button
+              color="primary"
+              style="font-size: 1.2rem; padding: 5px 30px"
+            >
+              Start Quiz
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

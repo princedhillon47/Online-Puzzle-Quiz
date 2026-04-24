@@ -1,0 +1,35 @@
+<div class="bootstrap-wrapper">
+  <div class="container mt-3">
+
+    <mat-card class="mb-4 hero-card">
+      <mat-card-content class="text-center p-5">
+        <h1>Welcome to the Exam Portal Dashboard, {{ adminName }}!</h1>
+        <p>Use the sidebar to manage your categories, create new quizzes, and add questions.</p>
+      </mat-card-content>
+    </mat-card>
+
+    <div class="row text-center">
+
+      <div class="col-md-6 mb-3">
+        <mat-card class="stat-card">
+          <mat-card-content>
+            <mat-icon class="stat-icon" color="primary">category</mat-icon>
+            <h1>{{ categoryCount }}</h1>
+            <h3>Total Categories</h3>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="col-md-6 mb-3">
+        <mat-card class="stat-card">
+          <mat-card-content>
+            <mat-icon class="stat-icon" color="accent">quiz</mat-icon>
+            <h1>{{ quizCount }}</h1>
+            <h3>Total Quizzes</h3>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+</div>

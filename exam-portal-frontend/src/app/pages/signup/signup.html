@@ -1,0 +1,53 @@
+<div class="bootstrap-wrapper">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Register Here</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <form (ngSubmit)="formSubmit()">
+              
+              <mat-form-field class="w-100 mt-3" appearance="outline">
+                <mat-label>Username</mat-label>
+                <input required [(ngModel)]="user.username" name="username" matInput placeholder="Enter username">
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Password</mat-label>
+                <input required [(ngModel)]="user.password" name="password" type="password" matInput placeholder="Enter password">
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>First Name</mat-label>
+                <input required [(ngModel)]="user.firstName" name="firstName" matInput placeholder="Enter first name">
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Last Name</mat-label>
+                <input required [(ngModel)]="user.lastName" name="lastName" matInput placeholder="Enter last name">
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Email Address</mat-label>
+                <input required [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Enter email">
+              </mat-form-field>
+
+              <mat-form-field class="w-100" appearance="outline">
+                <mat-label>Phone Number</mat-label>
+                <input [(ngModel)]="user.phone" name="phone" type="number" matInput placeholder="Enter phone number">
+              </mat-form-field>
+
+              <div class="text-center mt-3 mb-2">
+                <button type="submit" mat-raised-button color="primary">Register</button>
+                <button type="reset" mat-raised-button color="accent" class="ms-2">Clear</button>
+              </div>
+
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

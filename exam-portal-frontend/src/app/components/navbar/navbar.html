@@ -1,0 +1,20 @@
+<mat-toolbar color="primary">
+  
+  <a routerLink="/" mat-icon-button>
+    <mat-icon>menu</mat-icon>
+  </a>
+  <span>Exam Portal</span>
+  
+  <span style="flex: 1 1 auto;"></span>
+
+  <div *ngIf="!isLoggedIn">
+    <a routerLink="/login" mat-button>Login</a>
+    <a routerLink="/signup" mat-button>Register</a>
+  </div>
+
+  <div *ngIf="isLoggedIn">
+    <button mat-button>{{ user?.username }}</button>
+    <button mat-button (click)="logout()">Logout</button>
+  </div>
+
+</mat-toolbar>
